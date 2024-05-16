@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+        width: 95%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group input[type="number"] {
+        width: 95%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+
+    .toggle-form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .toggle-form button:hover {
+        background-color: #555;
+    }
+
+    .login-form {
+        display: none;
+    }
+
+    @media screen and (max-width: 480px) {
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>User Registration</h2>
+    <form action="/reg" method="post" class="registration-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="favorite-number">Favorite Number:</label>
+            <input type="number" id="favorite-number" name="favoritenumber" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    <form action="/login" method="post" class="login-form">
+        <div class="form-group">
+            <label for="login-name">Mail ID:</label>
+            <input type="text" id="login-email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit">Login</button>
+        </div>
+    </form>
+    <div class="toggle-form">
+        <button onclick="toggleForms()">Login</button>
+    </div>
+</div>
+
+<script>
+    function toggleForms() {
+        const registrationForm = document.querySelector('.registration-form');
+        const loginForm = document.querySelector('.login-form');
+        const toggleButton = document.querySelector('.toggle-form button');
+
+        if (registrationForm.style.display === 'none') {
+            registrationForm.style.display = 'block';
+            loginForm.style.display = 'none';
+            toggleButton.textContent = 'Login';
+        } else {
+            registrationForm.style.display = 'none';
+            loginForm.style.display = 'block';
+            toggleButton.textContent = 'Register';
+        }
+    }
+</script>
+
+</body>
+</html>
