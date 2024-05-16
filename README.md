@@ -11,7 +11,7 @@ step 6: Go to login and use admin credentials to see the data's (Mail id: admin@
 step 7: Stop <br />
 
 # or
-Download docker in your machine and type the following command to download the docker image: "docker pull 2021it0638/fav:0.0.1.RELEASE" < br/>
+Download docker in your machine and type the following command to download the docker image: "docker pull 2021it0638/fav:0.0.1.RELEASE" <br />
 This command creates a docker image in your local system and you can access the website from your localhost 3001
 
 ## Working of this assignment <br />
