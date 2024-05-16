@@ -1,5 +1,5 @@
 # favorite number <br />
-------------------------This repository was created as an assignment for a company---------------------<br />
+------------------This repository was created as an assignment for a company-----------------<br />
 
 ##How to use this project <br />
 Step 1: Clone the repository <br />
