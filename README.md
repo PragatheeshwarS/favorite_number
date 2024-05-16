@@ -10,6 +10,9 @@ step 5: Register in the platform <br />
 step 6: Go to login and use admin credentials to see the data's (Mail id: admin@gmail.com  pwd: admin) <br />
 step 7: Stop <br />
 
+# or
+Download docker in your machine and type the following command to download the docker image: "docker pull 2021it0638/fav:0.0.1.RELEASE" < br/>
+This command creates a docker image in your local system and you can access the website from your localhost 3001
 
 ## Working of this assignment <br />
 The login page and the registration page was developed using HTML, CSS and JS. <br />
